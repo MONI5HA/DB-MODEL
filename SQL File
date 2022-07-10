@@ -1,0 +1,9 @@
+
+create table guvi (user varchar(20),attendance varchar(10),topic varchar(30),tasks int,placement varchar(30),mentors varchar(20),std_courses int,courses varchar(30));
+insert into guvi (user,attendance,topic,tasks,placement,mentors,std_courses,courses) values('Monisha','90%','Queries',10,'5','sri',"Full-stack-developer",'Mongo');
+select user  from guvi;
+select placement from guvi where user = "Monisha";
+select std_courses,courses from guvi  where user="Monisha" group by courses;
+select distinct mentors from guvi;
+select count(user),mentors from guvi group by mentors;
+select count(course) from guvi group by user;
